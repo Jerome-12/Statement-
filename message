@@ -1,0 +1,14 @@
+import pytz
+import datetime
+
+bank="ICICI Bank"
+bank_balance=100000
+withdraw=int(input("Enter amount : "))
+time=pytz.timezone("Asia/Kolkata")
+ptime=datetime.datetime.now(time)
+balance=bank_balance-withdraw
+
+statement= "Your account is debited Rs.{0},on {1}.Your account balance is Rs.{2}.-{3}"
+print (statement.format(withdraw,ptime, balance,bank))
+
+
